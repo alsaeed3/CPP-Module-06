@@ -6,7 +6,7 @@
 /*   By: alsaeed <alsaeed@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/18 17:39:57 by alsaeed           #+#    #+#             */
-/*   Updated: 2024/05/18 18:23:35 by alsaeed          ###   ########.fr       */
+/*   Updated: 2024/07/13 19:06:13 by alsaeed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #include <iostream>
 
 int main(int argc, char* argv[]) {
+
     if (argc != 2) {
         std::cerr << "Usage: " << argv[0] << " <literal>" << std::endl;
         return 1;
