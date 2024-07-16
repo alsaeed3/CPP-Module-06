@@ -6,7 +6,7 @@
 /*   By: alsaeed <alsaeed@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/17 12:35:17 by alsaeed           #+#    #+#             */
-/*   Updated: 2024/07/16 18:15:33 by alsaeed          ###   ########.fr       */
+/*   Updated: 2024/07/16 19:43:30 by alsaeed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,4 @@ class ScalarConverter {
     	static void convert(const std::string &str);
 };
 
-#endif
+#endif // SCALARCONVERTER_HPP
