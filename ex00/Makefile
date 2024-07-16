@@ -6,7 +6,7 @@
 #    By: alsaeed <alsaeed@student.42abudhabi.ae>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/17 12:31:49 by alsaeed           #+#    #+#              #
-#    Updated: 2024/05/18 17:55:11 by alsaeed          ###   ########.fr        #
+#    Updated: 2024/07/16 15:31:51 by alsaeed          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,8 +37,6 @@ all: $(NAME)
 $(NAME): $(OBJS) main.cpp
 	@$(CXX) $(CXXFLAGS) $(OBJS) main.cpp -o $@
 	@echo "ScalarConverter compiled: $(BOLD_GREEN)OK$(RESET)"
-
-$(OBJS): Makefile main.cpp ScalarConverter.cpp ScalarConverter.hpp
 
 clean:
 	@if [ -e $(OBJS_DIR) ]; then \

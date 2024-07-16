@@ -6,7 +6,7 @@
 /*   By: alsaeed <alsaeed@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 22:50:50 by alsaeed           #+#    #+#             */
-/*   Updated: 2024/05/21 18:39:20 by alsaeed          ###   ########.fr       */
+/*   Updated: 2024/07/16 15:23:32 by alsaeed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,34 +16,9 @@
 
 # include <iostream>
 
-class Node {
-	
-	public:
-
-		void	*value;
-		Node	*next;
-		
-		Node( void );
-		Node( void *value );
-		~Node( void );
+struct Data {
+    int number;
+    std::string text;
 };
 
-class Data {
-
-	private:
-
-		Node	*head;
-		Node	*tail;
-
-	public:	
-
-		Data( void );
-		~Data( void );
-
-		void	addTail( void *value );
-		void*	getHeadValue( void );
-		void*	removeHead( void );
-		bool	isDataEmpty( void );
-};
-
-#endif
+#endif // DATA_HPP

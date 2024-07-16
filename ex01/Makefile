@@ -6,7 +6,7 @@
 #    By: alsaeed <alsaeed@student.42abudhabi.ae>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/20 22:51:11 by alsaeed           #+#    #+#              #
-#    Updated: 2024/05/21 18:23:12 by alsaeed          ###   ########.fr        #
+#    Updated: 2024/07/16 15:41:14 by alsaeed          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,9 @@ CXX = c++
 
 CXXFLAGS = -Wall -Werror -Wextra -std=c++98
 
-SRCS = Serializer.cpp Data.cpp
+SRCS = Serializer.cpp
+
+INCLUDES = -I./
 
 OBJS_DIR = objs
 
@@ -30,15 +32,13 @@ OBJS = $(SRCS:%.cpp=$(OBJS_DIR)/%.o)
 
 $(OBJS_DIR)/%.o: %.cpp
 	@mkdir -p $(OBJS_DIR)
-	@$(CXX) $(CXXFLAGS) -c $< -o $@
+	@$(CXX) $(CXXFLAGS) $(INCLUDES) -c $< -o $@
 
 all: $(NAME)
 
 $(NAME): $(OBJS) main.cpp
-	@$(CXX) $(CXXFLAGS) $(OBJS) main.cpp -o $@
+	@$(CXX) $(CXXFLAGS) $(INCLUDES) $(OBJS) main.cpp -o $@
 	@echo "Serializer compiled: $(BOLD_GREEN)OK$(RESET)"
-
-$(OBJS): Makefile main.cpp Serializer.cpp Serializer.hpp Data.cpp Data.hpp
 
 clean:
 	@if [ -e $(OBJS_DIR) ]; then \
