@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Serializer.hpp                                     :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alsaeed <alsaeed@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/20 22:50:29 by alsaeed           #+#    #+#             */
-/*   Updated: 2024/07/16 18:36:17 by alsaeed          ###   ########.fr       */
+/*   Created: 2024/07/16 16:49:18 by alsaeed           #+#    #+#             */
+/*   Updated: 2024/07/16 18:53:00 by alsaeed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
-#ifndef SERIALIZER_HPP
-#define SERIALIZER_HPP
+#include "Base.hpp"
 
-#include "Data.hpp"
+int main( void ) {
 
-class Serializer {
+    srand( time( NULL ) );
 
-	private:
+    Base* base = generate();
+    identify( base );
+    identify( *base );
 
-		Serializer( void );
+    delete base;
 
-	public:
-
-		static unsigned long	serialize(Data* ptr);
-		static Data*			deserialize(unsigned long raw);
-};
-
-#endif // SERIALIZER_HPP
+    return 0;
+}

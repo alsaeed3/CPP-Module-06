@@ -6,7 +6,7 @@
 #    By: alsaeed <alsaeed@student.42abudhabi.ae>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/17 12:31:49 by alsaeed           #+#    #+#              #
-#    Updated: 2024/07/16 15:31:51 by alsaeed          ###   ########.fr        #
+#    Updated: 2024/07/16 16:55:05 by alsaeed          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,6 +22,8 @@ CXX = c++
 
 CXXFLAGS = -Wall -Werror -Wextra -std=c++98
 
+INCLUDES = -I./
+
 SRCS = ScalarConverter.cpp
 
 OBJS_DIR = objs
@@ -30,12 +32,12 @@ OBJS = $(SRCS:%.cpp=$(OBJS_DIR)/%.o)
 
 $(OBJS_DIR)/%.o: %.cpp
 	@mkdir -p $(OBJS_DIR)
-	@$(CXX) $(CXXFLAGS) -c $< -o $@
+	@$(CXX) $(CXXFLAGS) $(INCLUDES) -c $< -o $@
 
 all: $(NAME)
 
 $(NAME): $(OBJS) main.cpp
-	@$(CXX) $(CXXFLAGS) $(OBJS) main.cpp -o $@
+	@$(CXX) $(CXXFLAGS) $(INCLUDES) $(OBJS) main.cpp -o $@
 	@echo "ScalarConverter compiled: $(BOLD_GREEN)OK$(RESET)"
 
 clean:

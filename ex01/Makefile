@@ -6,7 +6,7 @@
 #    By: alsaeed <alsaeed@student.42abudhabi.ae>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/20 22:51:11 by alsaeed           #+#    #+#              #
-#    Updated: 2024/07/16 15:41:14 by alsaeed          ###   ########.fr        #
+#    Updated: 2024/07/16 16:54:32 by alsaeed          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,9 +22,9 @@ CXX = c++
 
 CXXFLAGS = -Wall -Werror -Wextra -std=c++98
 
-SRCS = Serializer.cpp
-
 INCLUDES = -I./
+
+SRCS = Serializer.cpp
 
 OBJS_DIR = objs
 

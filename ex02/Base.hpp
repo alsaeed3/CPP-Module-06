@@ -1,31 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Serializer.hpp                                     :+:      :+:    :+:   */
+/*   Base.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alsaeed <alsaeed@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/20 22:50:29 by alsaeed           #+#    #+#             */
-/*   Updated: 2024/07/16 18:36:17 by alsaeed          ###   ########.fr       */
+/*   Created: 2024/07/16 16:40:19 by alsaeed           #+#    #+#             */
+/*   Updated: 2024/07/16 18:52:12 by alsaeed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
-#ifndef SERIALIZER_HPP
-#define SERIALIZER_HPP
+#ifndef BASE_HPP
+# define BASE_HPP
 
-#include "Data.hpp"
+# include <iostream>
+# include <ctime>
+# include <cstdlib>
 
-class Serializer {
+class Base {
 
-	private:
+    public:
 
-		Serializer( void );
-
-	public:
-
-		static unsigned long	serialize(Data* ptr);
-		static Data*			deserialize(unsigned long raw);
+        virtual ~Base() {};
 };
 
-#endif // SERIALIZER_HPP
+class A : public Base {};
+class B : public Base {};
+class C : public Base {};
+
+Base*   generate( void );
+void    identify( Base* p );
+void    identify( Base& p );
+
+#endif // BASE_HPP

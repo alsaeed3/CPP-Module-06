@@ -6,7 +6,7 @@
 /*   By: alsaeed <alsaeed@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/17 12:35:17 by alsaeed           #+#    #+#             */
-/*   Updated: 2024/07/13 19:34:33 by alsaeed          ###   ########.fr       */
+/*   Updated: 2024/07/16 18:15:33 by alsaeed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,6 @@
 
 class ScalarConverter {
 
-	public:
-
-    	static void convert(const std::string &str);
-
 	private:
 
 		ScalarConverter();
@@ -36,6 +32,9 @@ class ScalarConverter {
 		static bool toFloat( const std::string &literal );
 		static bool toChar( const std::string &literal );
 
+	public:
+
+    	static void convert(const std::string &str);
 };
 
 #endif
