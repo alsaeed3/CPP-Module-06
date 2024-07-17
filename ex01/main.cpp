@@ -6,13 +6,13 @@
 /*   By: alsaeed <alsaeed@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 22:51:08 by alsaeed           #+#    #+#             */
-/*   Updated: 2024/07/16 16:21:57 by alsaeed          ###   ########.fr       */
+/*   Updated: 2024/07/17 12:05:34 by alsaeed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include "Data.hpp"
-#include "Serializer.hpp"
+#include <Data.hpp>
+#include <Serializer.hpp>
 
 int main( void ) {
 

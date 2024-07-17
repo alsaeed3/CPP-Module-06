@@ -1,31 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Serializer.hpp                                     :+:      :+:    :+:   */
+/*   A.hpp                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alsaeed <alsaeed@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/20 22:50:29 by alsaeed           #+#    #+#             */
-/*   Updated: 2024/07/17 12:05:20 by alsaeed          ###   ########.fr       */
+/*   Created: 2024/07/17 11:38:48 by alsaeed           #+#    #+#             */
+/*   Updated: 2024/07/17 12:02:51 by alsaeed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
-#ifndef SERIALIZER_HPP
-#define SERIALIZER_HPP
+#ifndef A_HPP
+# define A_HPP
 
-#include <Data.hpp>
+# include <Base.hpp>
 
-class Serializer {
+class Base;
 
-	private:
+class A : public Base {};
 
-		Serializer( void );
-
-	public:
-
-		static unsigned long	serialize(Data* ptr);
-		static Data*			deserialize(unsigned long raw);
-};
-
-#endif // SERIALIZER_HPP
+#endif // A_HPP
